@@ -1,12 +1,52 @@
-# React + Vite
+# 🧠 Sentence Construction Tool
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sentence completion game built with **Vite + React + Tailwind CSS** for the CA MONK Frontend Internship assignment.
 
-Currently, two official plugins are available:
+## 🛠 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite + React
+- Tailwind CSS
+- TypeScript (optional)
+- JSON Server (for local API)
+- Deployed on Vercel
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Sentence blanks with selectable words
+- Unselect filled words by clicking on them
+- 30-second timer for each question
+- Auto navigation to next question on timeout
+- "Next" button enabled only after all blanks are filled
+- Final feedback screen showing:
+  - Correct and incorrect answers
+  - Final score out of 10
+
+## 📂 Folder Structure
+
+ca-monk-assignment/ ├── public/ ├── src/ │ ├── components/ │ │ ├── Intro.tsx │ │ ├── Game.tsx │ │ ├── Result.tsx │ │ ├── WordOptions.tsx │ │ ├── SentenceDisplay.tsx │ │ └── Timer.tsx │ ├── data/ │ │ └── types.ts │ ├── App.tsx │ └── main.tsx ├── db.json ├── index.html ├── tailwind.config.js ├── tsconfig.json ├── package.json └── README.md
+
+bash
+Copy
+Edit
+
+## ▶️ Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/tfkanhaiya/ca-monk-assignment.git
+cd ca-monk-assignment
+2. Install dependencies
+bash
+Copy
+Edit
+npm install
+3. Run JSON Server
+bash
+Copy
+Edit
+npx json-server --watch db.json --port 3001
+4. Start the app
+bash
+Copy
+Edit
+npm run dev
