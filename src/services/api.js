@@ -1,0 +1,78 @@
+export const fetchQuestions = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/questions")
+      if (!response.ok) {
+        throw new Error("Failed to fetch questions")
+      }
+      return await response.json()
+    } catch (error) {
+      console.error("Error fetching questions:", error)
+      // Return sample questions as fallback
+      return sampleQuestions
+    }
+  }
+  
+  // Sample questions to use as fallback if API is not available
+  const sampleQuestions = [
+    {
+      id: 1,
+      sentence: "The quick brown fox ______ over the ______ dog.",
+      options: ["jumps", "lazy", "runs", "sleepy"],
+      correctAnswers: ["jumps", "lazy"],
+    },
+    {
+      id: 2,
+      sentence: "She ______ to the store to ______ some groceries.",
+      options: ["went", "buy", "walked", "get"],
+      correctAnswers: ["went", "buy"],
+    },
+    {
+      id: 3,
+      sentence: "The ______ rain ______ down on the roof.",
+      options: ["heavy", "poured", "light", "fell"],
+      correctAnswers: ["heavy", "poured"],
+    },
+    {
+      id: 4,
+      sentence: "He ______ his keys and ______ to find them.",
+      options: ["lost", "tried", "forgot", "needed"],
+      correctAnswers: ["lost", "tried"],
+    },
+    {
+      id: 5,
+      sentence: "The children ______ in the park and ______ a great time.",
+      options: ["played", "had", "ran", "enjoyed"],
+      correctAnswers: ["played", "had"],
+    },
+    {
+      id: 6,
+      sentence: "She ______ the piano ______ than anyone else.",
+      options: ["plays", "better", "practices", "more"],
+      correctAnswers: ["plays", "better"],
+    },
+    {
+      id: 7,
+      sentence: "The ______ was so ______ that everyone applauded.",
+      options: ["performance", "amazing", "show", "impressive"],
+      correctAnswers: ["performance", "amazing"],
+    },
+    {
+      id: 8,
+      sentence: "They ______ to ______ the mountain before sunset.",
+      options: ["wanted", "climb", "planned", "reach"],
+      correctAnswers: ["wanted", "climb"],
+    },
+    {
+      id: 9,
+      sentence: "The ______ building ______ in the earthquake.",
+      options: ["old", "collapsed", "tall", "shook"],
+      correctAnswers: ["old", "collapsed"],
+    },
+    {
+      id: 10,
+      sentence: "She ______ her homework and ______ to bed early.",
+      options: ["finished", "went", "completed", "headed"],
+      correctAnswers: ["finished", "went"],
+    },
+  ]
+  
